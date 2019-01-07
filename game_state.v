@@ -28,11 +28,11 @@ module game_state(
                 if (game_over)
                     next_state = GAME_OVER;
                 else if (restart)
-                    next_state = GAME_INITIAL;
+                    next_state = GAME_PLAYING;
             end
             GAME_OVER: begin
                 if (restart)
-                    next_state = GAME_INITIAL;
+                    next_state = GAME_PLAYING;
             end
         endcase
     end
